@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: lab4.aux
+The style file: ieeetr.bst
+Database file #1: lab4.bib
+Warning--entry type for "ref:h" isn't style-file defined
+--line 1 of file lab4.bib
+Warning--entry type for "ref:e" isn't style-file defined
+--line 6 of file lab4.bib
+Warning--entry type for "ref:nobel" isn't style-file defined
+--line 11 of file lab4.bib
+You've used 3 entries,
+            1876 wiz_defined-function locations,
+            485 strings with 3620 characters,
+and the built_in function-call counts, 371 in all, are:
+= -- 26
+> -- 12
+< -- 0
++ -- 6
+- -- 3
+* -- 12
+:= -- 58
+add.period$ -- 1
+call.type$ -- 3
+change.case$ -- 3
+chr.to.int$ -- 0
+cite$ -- 3
+duplicate$ -- 12
+empty$ -- 55
+format.name$ -- 3
+if$ -- 90
+int.to.chr$ -- 0
+int.to.str$ -- 3
+missing$ -- 0
+newline$ -- 12
+num.names$ -- 3
+pop$ -- 17
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 20
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 3
+width$ -- 4
+write$ -- 21
+(There were 3 warnings)
