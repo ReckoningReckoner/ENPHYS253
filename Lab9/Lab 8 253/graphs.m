@@ -121,7 +121,7 @@ Bi4 = (R*C/(n2*Aci)).*Vib;
 Bi4_err = Bi4.*(Ac_err./Aci + R_err./R + C_err./C + Vib_err./Vib);
 
 figure(2)
-errorbar(Hi4,Bi4, Bi4_err, Bi4_err, Hi4_err, Hi4_err);
+errorbar(Hi4,Bi4, Bi4_err, Bi4_err, Hi4_err, Hi4_err, '.');
 
 
 xlabel('H [A/m]')
@@ -132,10 +132,10 @@ Ur = Bi4./Hi4./Uo;
 
 Ur_err = Ur .* (Bi4_err./Bi4 +  Hi4_err./Hi4)./2;
 figure(3)
-errorbar(Hi4,Ur, Ur_err, Ur_err)
+errorbar(Hi4,Ur, Ur_err, Ur_err, '.')
 title('Relative Pemeability for Iron Sample')
 xlabel('H [A/m]')
-ylabel('Ur [N/A^2]')
+ylabel('Ur')
 [Ur_max,ind] = max(Ur);
 Flux = Ur_max*Hi4(ind);
 Flux_err = Flux .* (Ur_err(ind)./Ur_max  + Hi4_err(ind)./Hi4(ind));
