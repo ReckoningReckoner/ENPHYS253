@@ -32,7 +32,7 @@ Hi = (n1/(Li*S)).*Vsi;
 Bi = (R*C/(n2*Aci)).*Vci;
 Hs = (n1/(Ls*S)).*Vss;
 Bs = (R*C/(n2*Acs)).*Vcs;
-figure(1)
+Loops = figure(1);
 hold on
 
 plot(Hi,Bi,'.')
@@ -42,6 +42,7 @@ title('Hysteresis Loops for Iron and Steel Samples')
 xlabel('Magnetizing Force [A/m]')
 ylabel('External Mangetic Field [T]')
 legend('Iron Sample','Steel Sample')
+saveas(Loops, '../Graphs/Loops', 'png')
 
 remi = [];
 coerci = [];
@@ -120,22 +121,22 @@ Hi4_err = (L_err./Li + S_err./S + Vih_err./Vih) .* Hi4;
 Bi4 = (R*C/(n2*Aci)).*Vib;
 Bi4_err = Bi4.*(Ac_err./Aci + R_err./R + C_err./C + Vib_err./Vib);
 
-figure(2)
+Corner = figure(2);
 errorbar(Hi4,Bi4, Bi4_err, Bi4_err, Hi4_err, Hi4_err, '.');
-
-
 xlabel('Magnetizing Force [A/m]')
 ylabel('External Mangetic Field [T]')
 title('Travelling Iron Sample Hyesteresis Corner due to Increasing Variac Voltage')
+saveas(Corner, '../Graphs/Corner', 'png')
 Uo = 4*pi*(10^-7); %http://physics.info/constants/
 Ur = Bi4./Hi4./Uo;
 
 Ur_err = Ur .* (Bi4_err./Bi4 +  Hi4_err./Hi4)./2;
-figure(3)
+perm = figure(3);
 errorbar(Hi4,Ur, Ur_err, Ur_err, '.')
 title('Relative Pemeability for Iron Sample')
 xlabel('Magnetizing Force [A/m]')
 ylabel('Relative Permeability')
+saveas(perm, '../Graphs/Permeability', 'png');
 [Ur_max,ind] = max(Ur);
 Flux = Ur_max*Hi4(ind);
 Flux_err = Flux .* (Ur_err(ind)./Ur_max  + Hi4_err(ind)./Hi4(ind));
