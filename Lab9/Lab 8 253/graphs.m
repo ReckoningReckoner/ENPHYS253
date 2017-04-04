@@ -39,8 +39,8 @@ plot(Hi,Bi,'.')
 plot(Hs,Bs,'.')
 title('Hysteresis Loops for Iron and Steel Samples')
 %look up title in analysis rubric
-xlabel('H [A/m]')
-ylabel('B [T]')
+xlabel('Magnetizing Force [A/m]')
+ylabel('External Mangetic Field [T]')
 legend('Iron Sample','Steel Sample')
 
 remi = [];
@@ -124,8 +124,8 @@ figure(2)
 errorbar(Hi4,Bi4, Bi4_err, Bi4_err, Hi4_err, Hi4_err, '.');
 
 
-xlabel('H [A/m]')
-ylabel('B [T]')
+xlabel('Magnetizing Force [A/m]')
+ylabel('External Mangetic Field [T]')
 title('Travelling Iron Sample Hyesteresis Corner due to Increasing Variac Voltage')
 Uo = 4*pi*(10^-7); %http://physics.info/constants/
 Ur = Bi4./Hi4./Uo;
@@ -134,8 +134,8 @@ Ur_err = Ur .* (Bi4_err./Bi4 +  Hi4_err./Hi4)./2;
 figure(3)
 errorbar(Hi4,Ur, Ur_err, Ur_err, '.')
 title('Relative Pemeability for Iron Sample')
-xlabel('H [A/m]')
-ylabel('Ur')
+xlabel('Magnetizing Force [A/m]')
+ylabel('Relative Permeability')
 [Ur_max,ind] = max(Ur);
 Flux = Ur_max*Hi4(ind);
 Flux_err = Flux .* (Ur_err(ind)./Ur_max  + Hi4_err(ind)./Hi4(ind));
